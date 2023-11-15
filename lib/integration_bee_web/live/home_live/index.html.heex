@@ -1,0 +1,43 @@
+	<div>
+		<h1 class="font-bold text-4xl"> 1st Annual UM Integration Bee</h1>
+		<ul class="mt-2">
+			<li>Bee: Thursday, January 26th, 2023, 6:30pm in 26-100 (<a href="https://web.mit.edu/webcast/math/iap23/">Event live-stream</a>)</li>
+			<li>Qualifier: Tuesday, January 24th, 2023, 4-6pm (any 20-minute block) in 4-149</li>
+		</ul>
+	</div>
+	
+	<div>
+		<div class="mt-4">
+			<h1 class="font-bold text-2xl">Background</h1>
+			<p class="mt-2">The UM Integration Bee is a yearly competition run by <a class="underline" href="https://www.cesium.di.uminho.pt">CeSIUM - Software Engineering Students Center</a>. The Bee is open to all UM students.</p>
+		</div>
+		
+		<div class="mt-4">
+			<h1 class="text-2xl font-semibold">Competition Format</h1>
+			<p class="mt-2">The qualifier test consists of 20 questions. It can be taken during any 20-minute period between 4 and 6pm on Tuesday, January 24th in room [ROOM].</p>
+			<p class="mt-2">The top 16 students from the qualifier test take part in the bee. </p>
+      <p class="mt-2"> The first round of the bee is a "regular season" with four students competing to solve each integral. Based on regular season performance, 8 students advance to a seeded single-elimination playoff bracket. In the playoffs, pairs of students go head-to-head to determine the Grand Integrator!</p>
+		</div>
+		
+		<div class="mt-4">
+			<h1 class="text-2xl font-bold">Results</h1>
+			<p>The 1st Annual Integration Bee took place on Thursday, January 26th, 2023. Eight students advanced to the playoff bracket:</p>
+			<.table
+  id="students"
+  rows={@streams.students}
+  row_click={fn {_id, student} -> JS.navigate(~p"/students/#{student}") end}
+>
+  <:col :let={{_id, student}} label="Name"><%= student.name %></:col>
+  <:col :let={{_id, student}} label="Course"><%= student.course %></:col>
+</.table>
+		</div>
+		
+		<div class="mt-4">
+			<h1 class="text-2xl font-bold"> Qualifiers</h1>
+			<p class="mt-2">The following students qualified for the bee (in alphabetical order):
+			</p>
+      <ul class="mt-2">
+				<li></li>
+			</ul>
+		</div>
+	</div>
