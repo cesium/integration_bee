@@ -30,7 +30,12 @@
   </:action>
 </.table>
 
-<.modal :if={@live_action in [:new, :edit]} id="student-modal" show on_cancel={JS.patch(~p"/students")}>
+<.modal
+  :if={@live_action in [:new, :edit]}
+  id="student-modal"
+  show
+  on_cancel={JS.patch(~p"/students")}
+>
   <.live_component
     module={IntegrationBeeWeb.StudentLive.FormComponent}
     id={@student.id || :new}

@@ -66,13 +66,12 @@ defmodule IntegrationBeeWeb.Router do
 
     live_session :require_authenticated_user,
       on_mount: [{IntegrationBeeWeb.UserAuth, :ensure_authenticated}] do
-        live "/students", StudentLive.Index, :index
-        live "/students/new", StudentLive.Index, :new
-        live "/students/:id/edit", StudentLive.Index, :edit
+      live "/students", StudentLive.Index, :index
+      live "/students/new", StudentLive.Index, :new
+      live "/students/:id/edit", StudentLive.Index, :edit
 
-        live "/students/:id", StudentLive.Show, :show
-        live "/students/:id/show/edit", StudentLive.Show, :edit
-
+      live "/students/:id", StudentLive.Show, :show
+      live "/students/:id/show/edit", StudentLive.Show, :edit
 
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email

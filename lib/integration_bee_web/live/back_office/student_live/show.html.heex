@@ -15,7 +15,12 @@
 
 <.back navigate={~p"/students"}>Back to students</.back>
 
-<.modal :if={@live_action == :edit} id="student-modal" show on_cancel={JS.patch(~p"/students/#{@student}")}>
+<.modal
+  :if={@live_action == :edit}
+  id="student-modal"
+  show
+  on_cancel={JS.patch(~p"/students/#{@student}")}
+>
   <.live_component
     module={IntegrationBeeWeb.StudentLive.FormComponent}
     id={@student.id}
