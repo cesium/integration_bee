@@ -15,7 +15,7 @@
   <header class="px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
       <div class="flex items-center gap-4">
-        <.link href="/" class="text-xl font-bold">UM Integration Bee</.link>
+        <.link patch="/" class="text-xl font-bold">UM Integration Bee</.link>
       </div>
 
       <div class="items-center font-semibold leading-6 text-zinc-900">
@@ -25,18 +25,18 @@
         <%= @current_user.email %>
       </li>
       <li>
-        <.link href={~p"/students"} class=" text-zinc-900 font-semibold hover:text-zinc-700">
+        <.link patch={~p"/students"} class=" text-zinc-900 font-semibold hover:text-zinc-700">
           Students
         </.link>
       </li>
       <li>
-        <.link href={~p"/users/settings"} class=" text-zinc-900 font-semibold hover:text-zinc-700">
+        <.link patch={~p"/users/settings"} class=" text-zinc-900 font-semibold hover:text-zinc-700">
           Settings
         </.link>
       </li>
       <li>
         <.link
-          href={~p"/users/log_out"}
+          patch={~p"/users/log_out"}
           method="delete"
           class=" text-zinc-900 font-semibold hover:text-zinc-700"
         >
@@ -45,13 +45,13 @@
       </li>
     <% else %>
       <li>
-        <.link href={~p"/users/register"} class=" text-zinc-900 font-semibold hover:text-zinc-700">
+        <.link patch={~p"/users/register"} class=" text-zinc-900 font-semibold hover:text-zinc-700">
           Register
         </.link>
       </li>
 
       <li>
-        <.link href={~p"/users/log_in"} class=" text-zinc-900 font-semibold hover:text-zinc-700">
+        <.link patch={~p"/users/log_in"} class=" text-zinc-900 font-semibold hover:text-zinc-700">
           Log in
         </.link>
       </li>
